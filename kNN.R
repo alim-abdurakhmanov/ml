@@ -19,7 +19,6 @@ sortObjectsByDist <- function(xl, z, metricFunction = euclideanDistance)
   
   return (orderedXl);
 }
-
 kNN <- function(xl, z, k)
 {
   orderedXl <- sortObjectsByDist(xl, z)
@@ -33,7 +32,6 @@ kNN <- function(xl, z, k)
 
 colors <- c("setosa" = "red", "versicolor" = "green3", "virginica" = "blue")
 plot(iris[, 3:4], pch = 21, bg = colors[iris$Species], col = colors[iris$Species], asp = 1)
-
 LOO <- function(classificator){ 
   vec <- c(seq(1, 5)) 
   for (k in 1:10) { 
