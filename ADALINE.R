@@ -33,6 +33,7 @@ sg.ADALINE <- function(xl, eta = 1, lambda = 1/6)
  Q <- 0
  for (i in 1:l)
  {
+
  ## calculate the scalar product <w,x>
  wx <- sum(w * xl[i, 1:n])
  ## calculate a margin
@@ -40,9 +41,9 @@ sg.ADALINE <- function(xl, eta = 1, lambda = 1/6)
 
  Q <- Q + lossQuad(margin)
  }
-
  repeat
  {
+
  ## calculate the margins for all objects of the
 training sample
  margins <- array(dim = l)
